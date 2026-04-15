@@ -9,6 +9,7 @@ in {
       nixos.base
       nixos.swap
       nixos.plasma6 # Desktop
+      nixos.hyprland
     ];
   };
 }
