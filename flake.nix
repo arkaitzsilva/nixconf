@@ -18,9 +18,11 @@
       url = "github:hyprwm/hyprnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    base16.url = "github:SenchoPens/base16.nix";
   };
 
-  outputs = inputs @ { flake-parts, import-tree, ... }:
+  outputs = inputs@{ flake-parts, import-tree, ... }:
     flake-parts.lib.mkFlake { inherit inputs; }
       (import-tree ./modules);
 }

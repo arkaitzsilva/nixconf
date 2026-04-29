@@ -1,14 +1,10 @@
-# Uses the option in `../configurations/nixos.nix` to declare a NixOS configuration
-{ config, ... }:
-let
-  inherit (config.flake.modules) nixos;
-in {
-  configurations.nixos.M11xR3.module = {
+{ config, ... }: {
+  configurations.nixos.M11xR3.module = with config.flake.modules.nixos; {
     imports = [
-      nixos.mbr
-      nixos.base
-      nixos.swap
-      nixos.plasma6 # Desktop
+      mbr
+      filesystems
+      swap
+      pc
     ];
   };
 }

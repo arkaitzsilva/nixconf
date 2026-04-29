@@ -1,5 +1,5 @@
 {
-  configurations.nixos.AW13.module = nixosArgs @ { pkgs, ... }: {
+  configurations.nixos.AW13.module = { pkgs, ... }: {
     boot.loader.grub = {
       useOSProber = true;
       splashImage = null;
