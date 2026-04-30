@@ -19,6 +19,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    declarative-flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
+
     base16.url = "github:SenchoPens/base16.nix";
   };
 
