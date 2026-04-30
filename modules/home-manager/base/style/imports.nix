@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.modules.homeManager.pc = {
+  flake.modules.homeManager.base = {
     imports = [
       inputs.base16.homeManagerModule
     ];

@@ -4,5 +4,6 @@
       enable = true;
       dotDir = "${config.xdg.configHome}/zsh";
     };
+    programs.oh-my-posh.enableZshIntegration = true;
   };
 }
