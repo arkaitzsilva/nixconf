@@ -9,7 +9,7 @@
           dpi-aware = "no";
           pad = "10x10";
         };
-        colors-dark = {
+        "colors-${config.scheme.variant}" = {
           cursor = "${config.scheme.base00} ${config.scheme.base04}";
           foreground = "${config.scheme.base05}";
           background = "${config.scheme.base00}";
