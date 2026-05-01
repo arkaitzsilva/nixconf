@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = { lib, config, pkgs, ... }: {
+  flake.modules.nixos.base = { lib, config, pkgs, ... }: {
     options = {
       theme = lib.mkOption {
         type = lib.types.singleLineStr;

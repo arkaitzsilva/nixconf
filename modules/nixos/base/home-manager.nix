@@ -10,7 +10,10 @@
 
       users.${config.flake.meta.owner.username} = {
         imports = [
-          ({ osConfig, ... }: { home.stateVersion = osConfig.system.stateVersion; })
+          ({ osConfig, ... }: {
+            home.stateVersion = osConfig.system.stateVersion;
+            scheme = osConfig.scheme;
+          })
           config.flake.modules.homeManager.base
         ];
       };
