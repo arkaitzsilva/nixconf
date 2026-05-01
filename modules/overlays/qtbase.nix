@@ -1,4 +1,4 @@
-# Remove GTK dependencies
+# Remove GTK dependency.
 {
   flake.overlays.qtbase = (final: prev: {
     qt6Packages = prev.qt6Packages.overrideScope (qt6PackagesFinal: qt6PackagesPrev: {

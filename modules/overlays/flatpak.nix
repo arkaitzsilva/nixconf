@@ -1,4 +1,4 @@
-# Remove gtk related dependencies
+# Remove GTK related dependencies.
 {
   flake.overlays.flatpak = (final: prev: {
     flatpak = (prev.flatpak.override {
