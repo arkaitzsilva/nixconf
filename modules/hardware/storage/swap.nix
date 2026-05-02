@@ -1,5 +1,5 @@
-{ config, lib, ... }: {
-  flake.modules.nixos.swap = {
+{
+  flake.modules.nixos.swap = { config, lib, ... }:  {
     options = {
       swap.size = lib.mkOption {
         type = lib.types.int;

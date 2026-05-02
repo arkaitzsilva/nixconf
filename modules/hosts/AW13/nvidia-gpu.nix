@@ -1,5 +1,9 @@
-{ config, lib, ... }: {
-  configurations.nixos.AW13.module = {
+{
+  nixpkgs.config.allowUnfreePackages = [
+    "nvidia-x11"
+  ];
+  
+  configurations.nixos.AW13.module = { config, lib, ... }: {
     hardware.graphics = {
       enable = true;
     };
