@@ -1,8 +1,5 @@
 {
-  flake.modules.homeManager.pc = { pkgs, ... }: {
-    programs.yazi = {
-      enable = true;
-      package = pkgs.yazi-unwrapped;
-    };
+  flake.modules.homeManager.pc = {
+    programs.yazi.enable = true;
   };
 }

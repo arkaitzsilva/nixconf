@@ -1,8 +1,5 @@
 {
-  flake.modules.homeManager.pc = { pkgs, ... }: {
-    programs.helix = {
-      enable = true;
-      package = pkgs.helix-unwrapped;
-    };
+  flake.modules.homeManager.pc = {
+    programs.helix.enable = true;
   };
 }
