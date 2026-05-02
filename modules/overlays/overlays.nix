@@ -5,5 +5,6 @@
     ly
     flatpak
     xdg-desktop-portal
+    btop
   ];
 }
