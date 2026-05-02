@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.pc = {
     editor = {
-      name = "helix";
+      name = "hx";
     };
   };
 }
