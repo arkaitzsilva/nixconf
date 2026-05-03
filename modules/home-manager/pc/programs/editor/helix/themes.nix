@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.pc = { config, ... }: {
     programs.helix = {
-      settings.theme = "${config.scheme.scheme-slug}";
+      settings.theme = config.scheme.scheme-slug;
       themes = {
         "${config.scheme.scheme-slug}" = with config.scheme.withHashtag; {
           # --- SYNTAX HIGHLIGHTING ---
