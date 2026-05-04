@@ -11,10 +11,10 @@
         extension = ".kvconfig";
       };
 
-    #xdg.configFile."Kvantum/base16/base16.svg".source =
-    #  config.scheme {
-    #    template = builtins.readFile ./templates/kvantum.svg.mustache;
-    #    extension = ".svg";
-    #  };
+    xdg.configFile."Kvantum/base16/base16.svg".source =
+      config.scheme {
+        template = builtins.readFile ./templates/kvantum.svg.mustache;
+        extension = ".svg";
+      };
   };
 }
