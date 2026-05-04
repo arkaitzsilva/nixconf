@@ -2,8 +2,8 @@
   flake.modules.homeManager.pc = { config, ... }: {
     xdg.configFile."niri/misc.kdl".text = ''
       cursor {
-        // xcursor-theme "Nx-Snow"
-        // xcursor-size 24
+        xcursor-theme "${config.cursor.theme.name}"
+        xcursor-size 24
         hide-when-typing
         hide-after-inactive-ms 10000
       }

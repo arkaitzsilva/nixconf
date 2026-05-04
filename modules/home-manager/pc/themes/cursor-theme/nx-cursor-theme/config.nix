@@ -1,5 +1,5 @@
 {
   flake.modules.homeManager.pc = {
-    editor.name = "hx";
+    cursor.theme.name = "Nx_Snow";
   };
 }
