@@ -6,5 +6,6 @@
     flatpak
     xdg-desktop-portal
     btop
+    gst-plugins-bad
   ];
 }
