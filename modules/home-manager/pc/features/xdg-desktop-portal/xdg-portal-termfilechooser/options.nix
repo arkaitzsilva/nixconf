@@ -1,15 +1,11 @@
 {
   flake.modules.homeManager.pc = { lib, ... }: {
-    options.file-manager = {
-      name = lib.mkOption {
+    options.xdg.termfilechooser = {
+      wrapper = lib.mkOption {
         type = lib.types.singleLineStr;
         default = null;
       };
-      path = lib.mkOption {
-        type = lib.types.path;
-        default = null;
-      };
-      open-cmd = lib.mkOption {
+      term-cmd = lib.mkOption {
         type = lib.types.singleLineStr;
         default = null;
       };

@@ -1,11 +1,11 @@
 {
-  flake.modules.homeManager.pc = {
+  flake.modules.homeManager.pc = { config, ... }: {
     xdg.configFile."xdg-desktop-portal-termfilechooser/config".text = ''
       [filechooser]
       create_help_file=1
-      cmd=yazi-wrapper.sh
+      cmd=${config.xdg.termfilechooser.wrapper}
       default_dir=$XDG_DOWNLOAD_DIR
-      env=TERMCMD='foot --app-id xdg-desktop-portal-termfilechooser --title "Terminal File Chooser"'
+      env=TERMCMD='${config.xdg.termfilechooser.term-cmd}'
       open_mode = suggested
       save_mode = default
     '';

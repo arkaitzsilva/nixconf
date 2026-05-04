@@ -1,5 +1,5 @@
-{ lib, ... }: {
-  flake.modules.homeManager.pc = {
+{
+  flake.modules.homeManager.pc = { lib, ... }: {
     options.terminal = {
       name = lib.mkOption {
         type = lib.types.singleLineStr;
