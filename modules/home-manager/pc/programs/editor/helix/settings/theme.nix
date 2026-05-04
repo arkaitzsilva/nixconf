@@ -1,9 +1,9 @@
 {
   flake.modules.homeManager.pc = { config, ... }: {
     programs.helix = {
-      settings.theme = config.scheme.scheme-slug;
+      settings.theme = "base16";
       themes = {
-        "${config.scheme.scheme-slug}" = with config.scheme.withHashtag; {
+        "base16" = with config.scheme.withHashtag; {
           # --- SYNTAX HIGHLIGHTING ---
           "constant"                   = base04;
           "constant.builtin"           = base0D;

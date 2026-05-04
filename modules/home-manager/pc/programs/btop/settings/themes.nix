@@ -1,9 +1,9 @@
 {
   flake.modules.homeManager.pc = { config, ... }: {
     programs.btop = {
-      settings.color_theme = config.scheme.scheme-slug;
+      settings.color_theme = "base16";
       themes = {
-        "${config.scheme.scheme-slug}" = with config.scheme.withHashtag; ''
+        "base16" = with config.scheme.withHashtag; ''
           theme[main_bg]="${base00}"
           theme[main_fg]="${base04}"
           theme[title]="${base07}"
