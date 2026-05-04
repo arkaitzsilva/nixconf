@@ -4,13 +4,13 @@
       base16 = with config.scheme.withHashtag; {
         theme = {
           primary = {
-            dark = base0C;
+            dark = base0D;
             light = base0F;
           };
 
           secondary = {
-            dark = base0D;
-            light = base0D;
+            dark = base0C;
+            light = base0C;
           };
 
           accent = {
@@ -34,7 +34,7 @@
           };
 
           info = {
-            dark = base0C;
+            dark = base0D;
             light = base0F;
           };
 
@@ -44,7 +44,7 @@
           };
 
           textMuted = {
-            dark = "#8B95A7";
+            dark = base0D;
             light = base01;
           };
 
@@ -89,12 +89,12 @@
           };
 
           diffContext = {
-            dark = "#8B95A7";
+            dark = base0D;
             light = base03;
           };
 
           diffHunkHeader = {
-            dark = "#8B95A7";
+            dark = base0D;
             light = base03;
           };
 
@@ -124,7 +124,7 @@
           };
 
           diffLineNumber = {
-            dark = "#a9aeb6";
+            dark = base07;
             light = base01;
           };
 
@@ -144,13 +144,13 @@
           };
 
           markdownHeading = {
-            dark = base0C;
+            dark = base0D;
             light = base0F;
           };
 
           markdownLink = {
-            dark = base0D;
-            light = base0D;
+            dark = base0C;
+            light = base0C;
           };
 
           markdownLinkText = {
@@ -164,7 +164,7 @@
           };
 
           markdownBlockQuote = {
-            dark = "#8B95A7";
+            dark = base0D;
             light = base03;
           };
 
@@ -179,12 +179,12 @@
           };
 
           markdownHorizontalRule = {
-            dark = "#8B95A7";
+            dark = base0D;
             light = base03;
           };
 
           markdownListItem = {
-            dark = base0C;
+            dark = base0D;
             light = base0F;
           };
 
@@ -194,8 +194,8 @@
           };
 
           markdownImage = {
-            dark = base0D;
-            light = base0D;
+            dark = base0C;
+            light = base0C;
           };
 
           markdownImageText = {
@@ -209,18 +209,18 @@
           };
 
           syntaxComment = {
-            dark = "#8B95A7";
+            dark = base0D;
             light = base03;
           };
 
           syntaxKeyword = {
-            dark = base0D;
-            light = base0D;
+            dark = base0C;
+            light = base0C;
           };
 
           syntaxFunction = {
-            dark = base0C;
-            light = base0C;
+            dark = base0D;
+            light = base0D;
           };
 
           syntaxVariable = {
@@ -244,8 +244,8 @@
           };
 
           syntaxOperator = {
-            dark = base0D;
-            light = base0D;
+            dark = base0C;
+            light = base0C;
           };
 
           syntaxPunctuation = {
