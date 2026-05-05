@@ -7,6 +7,7 @@
       include "misc.kdl"
       include "window-rules.kdl"
       include "animations.kdl"
+      include "debug.kdl"
     '';
   };
 }
