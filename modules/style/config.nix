@@ -1,8 +1,8 @@
 {
   flake.modules.nixos.style = { config, pkgs, ... }: {
     config.theme ={
-      name = "nord";
-      custom = false;
+      name = "retrowave";
+      custom = true;
     };
     config.scheme =
       if config.theme.custom then ./custom-schemes/${config.theme.name}.yaml
