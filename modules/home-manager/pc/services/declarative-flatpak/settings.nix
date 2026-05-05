@@ -33,6 +33,7 @@
           Context = {
             filesystems = [
               "~/.zen"
+              "~/Descargas"
             ];
           };
           Environment = {

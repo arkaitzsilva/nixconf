@@ -15,6 +15,7 @@
       hotkey-overlay {
         skip-at-startup
       }
+      spawn-sh-at-startup "${config.wallpaper.start-cmd}"
     '';
   };
 }
