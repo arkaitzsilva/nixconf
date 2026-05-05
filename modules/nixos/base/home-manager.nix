@@ -15,6 +15,8 @@
             scheme = osConfig.scheme;
           })
           config.flake.modules.homeManager.base
+          config.flake.modules.homeManager.style
+          config.flake.modules.homeManager.dev
         ];
       };
     };
