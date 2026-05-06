@@ -5,6 +5,10 @@
         type = lib.types.singleLineStr;
         default = null;
       };
+      size = lib.mkOption {
+        type = lib.types.int;
+        default = null;
+      };
     };
   };
 }

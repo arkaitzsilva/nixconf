@@ -3,7 +3,7 @@
     xdg.configFile."niri/misc.kdl".text = ''
       cursor {
         xcursor-theme "${config.cursor.theme.name}"
-        xcursor-size 24
+        xcursor-size "${toString config.cursor.theme.size}"
         hide-when-typing
         hide-after-inactive-ms 10000
       }
