@@ -1,11 +1,11 @@
 {
-  flake.modules.homeManager.pc = hmArgs: {
+  flake.modules.homeManager.pc = { config, ... }: {
     xdg.configFile."niri/binds.kdl".text = ''
       binds {
         Mod+Shift+Slash { show-hotkey-overlay; }
 
-        Mod+Return hotkey-overlay-title="Open a Terminal: ${hmArgs.config.terminal.name}" { spawn "${hmArgs.config.terminal.path}"; }
-        Mod+E hotkey-overlay-title="Open a file manager: ${hmArgs.config.file-manager.name}" { spawn-sh "${hmArgs.config.file-manager.open-cmd}"; }
+        Mod+Return hotkey-overlay-title="Open a Terminal: ${config.terminal.name}" { spawn "${config.terminal.path}"; }
+        Mod+E hotkey-overlay-title="Open a file manager: ${config.file-manager.name}" { spawn-sh "${config.file-manager.open-cmd}"; }
 
         Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 

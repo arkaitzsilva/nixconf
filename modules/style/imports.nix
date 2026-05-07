@@ -1,11 +1,11 @@
 { inputs, ... }: {
   flake.modules = {
-    nixos.style = {
+    nixos.base = {
       imports = [
         inputs.base16.nixosModule
       ];
     };
-    homeManager.style = {
+    homeManager.base = {
       imports = [
         inputs.base16.homeManagerModule
       ];

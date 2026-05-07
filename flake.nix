@@ -22,6 +22,11 @@
     declarative-flatpak.url = "github:in-a-dil-emma/declarative-flatpak/latest";
 
     base16.url = "github:SenchoPens/base16.nix";
+
+    tinted-schemes = {
+      flake = false;
+      url = "github:tinted-theming/schemes";
+    };
   };
 
   outputs = inputs@{ flake-parts, import-tree, ... }:
