@@ -8,6 +8,8 @@
       include "window-rules.kdl"
       include "animations.kdl"
       include "debug.kdl"
+      include "gestures.kdl"
+      include "recent-windows.kdl"
     '';
   };
 }

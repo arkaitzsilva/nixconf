@@ -1,19 +1,18 @@
 {
   flake.modules.nixos.base = {
-    i18n = let
-      es_ES = "es_ES.UTF-8";
-    in {
-      defaultLocale = es_ES;
+    i18n = {
+      defaultLocale = "en_US.UTF-8";
+      extraLocales = [ "es_ES.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" "C.UTF-8/UTF-8" ];
       extraLocaleSettings =  {
-        LC_ADDRESS = es_ES;
-        LC_IDENTIFICATION = es_ES;
-        LC_MEASUREMENT = es_ES;
-        LC_MONETARY = es_ES;
-        LC_NAME = es_ES;
-        LC_NUMERIC = es_ES;
-        LC_PAPER = es_ES;
-        LC_TELEPHONE = es_ES;
-        LC_TIME = es_ES;
+        LC_ADDRESS = "es_ES.UTF-8";
+        LC_IDENTIFICATION = "es_ES.UTF-8";
+        LC_MEASUREMENT = "es_ES.UTF-8";
+        LC_MONETARY = "es_ES.UTF-8";
+        LC_NAME = "es_ES.UTF-8";
+        LC_NUMERIC = "es_ES.UTF-8";
+        LC_PAPER = "es_ES.UTF-8";
+        LC_TELEPHONE = "es_ES.UTF-8";
+        LC_TIME = "C.UTF-8";
       };
     };
   };

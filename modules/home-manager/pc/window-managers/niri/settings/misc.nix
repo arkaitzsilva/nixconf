@@ -16,6 +16,8 @@
         skip-at-startup
       }
       spawn-sh-at-startup "${config.wallpaper.start-cmd}"
+
+      screenshot-path "${config.xdg.userDirs.pictures}/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
     '';
   };
 }

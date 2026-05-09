@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.pc = {
+  flake.modules.homeManager.pc = { config, ... }: {
     services.flatpak = {
       remotes = {
         flathub = "https://flathub.org/repo/flathub.flatpakrepo";
@@ -32,7 +32,7 @@
           Context = {
             filesystems = [
               "~/.zen"
-              "~/Descargas"
+              "${config.xdg.userDirs.download}"
             ];
           };
           Environment = {

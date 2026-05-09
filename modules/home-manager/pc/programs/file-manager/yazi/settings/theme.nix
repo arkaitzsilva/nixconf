@@ -140,12 +140,12 @@
 
         dirs = [
           { name = ".git";       text = ""; fg = base0C; }
-          { name = "Escritorio"; text = ""; fg = base0C; }
-          { name = "Descargas";  text = ""; fg = base0C; }
-          { name = "Documentos"; text = ""; fg = base0C; }
-          { name = "Imágenes";   text = ""; fg = base0C; }
-          { name = "Música";     text = ""; fg = base0C; }
-          { name = "Vídeos";     text = ""; fg = base0C; }
+          { name = "${config.xdg.userDirs.desktop}"; text = ""; fg = base0C; }
+          { name = "${config.xdg.userDirs.download}";  text = ""; fg = base0C; }
+          { name = "${config.xdg.userDirs.documents}"; text = ""; fg = base0C; }
+          { name = "${config.xdg.userDirs.pictures}";   text = ""; fg = base0C; }
+          { name = "${config.xdg.userDirs.music}";     text = ""; fg = base0C; }
+          { name = "${config.xdg.userDirs.videos}";     text = ""; fg = base0C; }
         ];
 
         files = [

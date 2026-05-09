@@ -11,7 +11,7 @@
         # brightness_down_cmd = "${pkgs.brightnessctl}/bin/brightnessctl -q -n s 10%-";
         brightness_up_key = "F6";
         # brightness_up_cmd = "${pkgs.brightnessctl}/bin/brightnessctl -q -n s 10%+";
-        lang = "es";
+        lang = "en";
         hide_version_string = true;
         xsessions = "";
       };

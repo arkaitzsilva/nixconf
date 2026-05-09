@@ -1,8 +1,8 @@
 {
-  flake.modules.homeManager.pc = { config, ...}: {
+  flake.modules.homeManager.pc = { config, ...}: with config.scheme.withHashtag; {
     xdg.configFile."niri/layout.kdl".text = ''
       layout {
-        background-color "${config.scheme.withHashtag.base00}"
+        background-color "${base00}"
         gaps 8
         center-focused-column "never"
         preset-column-widths {
@@ -17,9 +17,9 @@
         border {
           on
           width 2
-          active-gradient from="${config.scheme.withHashtag.base0C}" to="${config.scheme.withHashtag.base0A}" angle=45 in="oklch shorter hue"
-          inactive-color "${config.scheme.withHashtag.base03}"
-          urgent-color "${config.scheme.withHashtag.base08}"
+          active-gradient from="${base0C}" to="${base0A}" angle=45 in="oklch shorter hue"
+          inactive-color "${base03}"
+          urgent-color "${base08}"
         }
       }
     '';
