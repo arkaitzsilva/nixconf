@@ -17,7 +17,7 @@
         border {
           on
           width 2
-          active-gradient from="${base0C}" to="${base0A}" angle=45 in="oklch shorter hue"
+          active-gradient from="${base0C}" to="${base0D}" angle=45 in="oklch shorter hue"
           inactive-color "${base03}"
           urgent-color "${base08}"
         }
