@@ -1,5 +1,5 @@
 {
   config.theme ={
-    name = "fluoromachine-retrowave";
+    name = "retrowave";
   };
 }
