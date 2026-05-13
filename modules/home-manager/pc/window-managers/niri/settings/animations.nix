@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.pc = {
+  flake.modules.homeManager.pc = { lib, osConfig, ... }: lib.mkIf osConfig.programs.niri.enable {
     xdg.configFile."niri/animations.kdl".text = ''
       animations {
        workspace-switch {

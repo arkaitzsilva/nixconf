@@ -1,12 +1,12 @@
 # Overlays to be loaded.
 { inputs, ... }: { 
   nixpkgs.overlays = with inputs.self.overlays; [
-    qtbase
     ly
-    flatpak
-    xdg-desktop-portal
     btop
     gst-plugins-bad
-    xwayland
+    # qtbase
+    # flatpak
+    # xdg-desktop-portal
+    # xwayland
   ];
 }

@@ -1,7 +1,7 @@
 {
-  flake.modules.homeManager.pc = { lib, osConfig, ... }: {
-    services.flatpak = lib.mkIf osConfig.services.flatpak.enable {
-      enable = true;
+  flake.modules.homeManager.pc = { osConfig, ... }: {
+    services.flatpak = {
+      enable = osConfig.services.flatpak.enable;
     };
   };
 }

@@ -1,5 +1,5 @@
 {
   flake.modules.nixos.pc = {
-    services.flatpak.enable = true;
+    services.flatpak.enable = false;
   };
 }

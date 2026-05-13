@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.pc = { config, ... }: {
+  flake.modules.homeManager.pc = { lib, config, osConfig, ... }: lib.mkIf osConfig.programs.niri.enable {
     xdg.configFile."niri/binds.kdl".text = ''
       binds {
         Mod+Shift+Slash { show-hotkey-overlay; }

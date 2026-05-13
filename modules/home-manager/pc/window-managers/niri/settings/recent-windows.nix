@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.pc = { config, ... }: with config.scheme.withHashtag; {
+  flake.modules.homeManager.pc = { lib, config, osConfig, ... }: with config.scheme.withHashtag; lib.mkIf osConfig.programs.niri.enable {
     xdg.configFile."niri/recent-windows.kdl".text = ''
       recent-windows {
         debounce-ms 750
