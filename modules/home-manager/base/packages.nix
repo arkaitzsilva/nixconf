@@ -1,8 +1,9 @@
 {
-  flake.modules.homeManager.pc = { pkgs, ... }: {
+  flake.modules.homeManager.base = { pkgs, ... }: {
     home.packages = with pkgs; [
       cryfs
       cmatrix
+      pstree
     ];
   };
 }

@@ -3,7 +3,6 @@
     programs.oh-my-posh = {
       settings = {
         "$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json";
-        extends = "/home/alienware/.config/oh-my-posh/theme.json";
 
         secondary_prompt = {
           template = "❯❯ ";
