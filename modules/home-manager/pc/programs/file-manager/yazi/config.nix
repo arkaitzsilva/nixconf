@@ -1,9 +1,9 @@
-{ lib, ... }: {
-  flake.modules.homeManager.pc = hmArgs: {
+{
+  flake.modules.homeManager.pc = { lib, config, ... }: lib.mkIf config.programs.yazi.enable {
     file-manager = {
       name = "yazi";
-      path = lib.getExe hmArgs.config.programs.yazi.package;
-      open-cmd = "${hmArgs.config.terminal.path} --app-id ${hmArgs.config.file-manager.name} -- ${hmArgs.config.file-manager.path}";
+      path = lib.getExe config.programs.yazi.package;
+      open-cmd = "${config.terminal.path} --app-id ${config.file-manager.name} -- ${config.file-manager.path}";
     };
   };
 }
