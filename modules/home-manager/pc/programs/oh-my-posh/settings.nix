@@ -1,7 +1,7 @@
 {
-  flake.modules.homeManager.base = {osConfig, ... }: {
+  flake.modules.homeManager.base = { config, ... }: {
     programs.oh-my-posh = {
-      enableZshIntegration = osConfig.programs.zsh.enable;
+      enableZshIntegration = config.programs.zsh.enable;
     };
   };
 }
