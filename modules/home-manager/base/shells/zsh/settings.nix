@@ -2,10 +2,6 @@
   flake.modules.homeManager.base = { config, ... }: {
     programs.zsh = {
       dotDir = "${config.xdg.configHome}/zsh";
-      shellAliases = {
-        cls = "clear";
-        crfs = "cryfs ~/.vault ~/Vault";
-      };
       enableCompletion = true;
       syntaxHighlighting.enable = true;
       autosuggestion.enable = true;
