@@ -1,15 +1,15 @@
 {
   flake.modules.homeManager.pc = { config, ... }: {
     programs.fzf.colors = with config.scheme.withHashtag; {
-      "fg" = base0D;
+      "fg" = base06;
       "bg" = base00;
-      "preview-fg" = base03;
+      "preview-fg" = base04;
       "preview-bg" = base00;
-      "hl" = base0D;
-      "fg+" = base0D;
-      "bg+" = base01;
+      "hl" = base07;
+      "fg+" = base03;
+      "bg+" = base0C;
       "gutter" = base00;
-      "hl+" = base0D;
+      "hl+" = base00;
       "info" = base0B;
       "border" = base03;
       "prompt" = base0D;
