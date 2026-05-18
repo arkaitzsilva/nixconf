@@ -9,5 +9,6 @@
     xwayland
     flatpak
     qbittorrent
+    calibre
   ];
 }
