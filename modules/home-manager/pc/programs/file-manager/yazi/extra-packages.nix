@@ -6,6 +6,7 @@
       resvg # SVG files
       ffmpeg-headless # Vídeo files
       poppler-utils # PDF files
+      _7zz # Zip files
 
       # Plugins
       trash-cli # recycle-bin
