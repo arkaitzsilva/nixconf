@@ -52,8 +52,8 @@
           };
           hints = {
             bg       = base0C;
-            fg       = base00;
-            match.fg = base03;
+            fg       = base03;
+            match.fg = base00;
           };
           keyhint = {
             bg        = base01;
