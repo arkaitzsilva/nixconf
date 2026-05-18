@@ -1,22 +1,22 @@
 {
   flake.modules.homeManager.pc = { config, ... }: {
     programs.fzf.colors = with config.scheme.withHashtag; {
-      "fg" = base06;
+      "fg" = base04;
       "bg" = base00;
       "preview-fg" = base04;
       "preview-bg" = base00;
       "hl" = base07;
-      "fg+" = base03;
-      "bg+" = base0C;
+      "fg+" = base04;
+      "bg+" = base02;
       "gutter" = base00;
-      "hl+" = base00;
+      "hl+" = base07;
       "info" = base0B;
       "border" = base03;
-      "prompt" = base0D;
+      "prompt" = base0C;
       "pointer" = base0C;
       "marker" = base0C;
       "spinner" = base0C;
-      "header" = base0D;
+      "header" = base0C;
     };
   };
 }

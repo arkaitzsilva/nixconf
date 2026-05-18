@@ -23,7 +23,7 @@
       };
 
       indicator = {
-        parent  = { fg = base04; bg = base03; };
+        parent  = { fg = base04; bg = base02; };
         current = { fg = base00; bg = base0C; };
         preview = { fg = base04; bg = base01; };
         padding = { open = "█"; close = "█"; };
