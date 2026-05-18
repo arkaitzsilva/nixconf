@@ -51,9 +51,9 @@
             };
           };
           hints = {
-            bg       = base0C;
-            fg       = base03;
-            match.fg = base00;
+            bg       = base01;
+            fg       = base04;
+            match.fg = base07;
           };
           keyhint = {
             bg        = base01;
@@ -126,7 +126,7 @@
           };
         };
 
-        hints.border = "1px solid ${base01}";
+        hints.border = "1px solid ${base0C}";
 
         tabs.indicator.width = 2;
         tabs.favicons.scale  = 1;
