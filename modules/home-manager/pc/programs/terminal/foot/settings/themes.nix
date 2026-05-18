@@ -2,7 +2,7 @@
   flake.modules.homeManager.pc = { config, ... }: {
     programs.foot.settings = {
       "colors-${config.scheme.variant}" = {
-        cursor = "${config.scheme.base00} ${config.scheme.base04}";
+        cursor = "${config.scheme.base00} ${config.scheme.base0C}";
         foreground = "${config.scheme.base05}";
         background = "${config.scheme.base00}";
         regular0 = "${config.scheme.base00}";

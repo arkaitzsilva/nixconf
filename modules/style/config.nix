@@ -1,5 +1,5 @@
 {
   config.theme ={
-    name = "retrowave";
+    name = "nord";
   };
 }
