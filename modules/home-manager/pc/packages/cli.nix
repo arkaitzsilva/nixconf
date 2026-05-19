@@ -5,6 +5,7 @@
       cmatrix
       pstree
       asciiquarium
+      gifsicle
     ];
   };
 }

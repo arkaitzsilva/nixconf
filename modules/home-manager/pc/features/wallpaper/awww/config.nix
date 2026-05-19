@@ -1,8 +1,8 @@
 {
-  flake.modules.homeManager.pc = {
+  flake.modules.homeManager.pc = { config, ... }: {
     wallpaper = {
       backend = "awww";
-      start-cmd = "awww-daemon --format argb";
+      start-cmd = "awww-daemon --format argb & awww img ${config.wallpaper.path}/${config.wallpaper.name}";
     };
   };
 }
