@@ -5,11 +5,11 @@
       "bg" = base00;
       "preview-fg" = base04;
       "preview-bg" = base00;
-      "hl" = base07;
-      "fg+" = base04;
-      "bg+" = base02;
+      "hl" = base0C;
+      "fg+" = base00;
+      "bg+" = base0C;
       "gutter" = base00;
-      "hl+" = base07;
+      "hl+" = base06;
       "info" = base0B;
       "border" = base03;
       "prompt" = base0C;

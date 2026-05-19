@@ -1,9 +1,10 @@
 {
-  flake.modules.homeManager.base = { pkgs, ... }: {
+  flake.modules.homeManager.pc = { pkgs, ... }: {
     home.packages = with pkgs; [
       cryfs
       cmatrix
       pstree
+      asciiquarium
     ];
   };
 }

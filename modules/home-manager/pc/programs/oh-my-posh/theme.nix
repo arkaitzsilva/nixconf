@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.base = { config, ... }: {
     programs.oh-my-posh = {
-      settings = {
+      settings =  with config.scheme.withHashtag; {
         "$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json";
 
         secondary_prompt = {
@@ -97,12 +97,12 @@
         final_space = true;
 
         palette = {
-          green = "${config.scheme.withHashtag.base0B}";
-          red = "${config.scheme.withHashtag.base08}";
-          blue = "${config.scheme.withHashtag.base0C}";
-          purple = "${config.scheme.withHashtag.base0E}";
-          teal = "${config.scheme.withHashtag.base07}";
-          white = "${config.scheme.withHashtag.base04}";
+          green = "${base0B}";
+          red = "${base08}";
+          blue = "${base0C}";
+          purple = "${base0E}";
+          teal = "${base07}";
+          white = "${base04}";
         };
       };
     };
