@@ -2,11 +2,11 @@
   flake.modules = {
     homeManager.pc = {
       gtk = {
-        enable = false;
+        enable = true;
       };
     };
     nixos.pc = {
-      programs.dconf.enable = false;
+      programs.dconf.enable = true;
     };
   };
 }

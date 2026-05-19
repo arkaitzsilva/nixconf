@@ -17,6 +17,7 @@
 
         inhibit_apps [
           "mpv"
+          r"firefox.*"
         ]
 
         # ----------------------------------------------------------------
@@ -29,8 +30,8 @@
 
         early_dpms:
           timeout 300
-          command "hyprctl dispatch dpms off"
-          resume_command "hyprctl dispatch dpms on"
+          command "dpms-off"
+          resume_command "dpms-on"
         end
 
         lock_screen:
@@ -43,8 +44,8 @@
 
         dpms:
           timeout screen_off_after
-          command "hyprctl dispatch dpms off"
-          resume_command "hyprctl dispatch dpms on"
+          command "dpms-off"
+          resume_command "dpms-on"
         end
 
         suspend:
@@ -64,12 +65,13 @@
           brightness:
             timeout 120
             command "brightnessctl set 30%"
+            resume_command "brightnessctl set 100%"
           end
 
           dpms:
             timeout 60
-            command "hyprctl dispatch dpms off"
-            resume_command "hyprctl dispatch dpms on"
+            command "dpms-off"
+            resume_command "dpms-on"
           end
 
           lock_screen:
@@ -88,18 +90,19 @@
         battery:
           custom_brightness_instant:
             timeout 0
-            command "brightnessctl set 40%"
+            command "brightnessctl set 80%"
           end
 
           brightness:
             timeout 60
             command "brightnessctl set 20%"
+            resume_command "brightnessctl set 80%"
           end
 
           dpms:
             timeout 30
-            command "hyprctl dispatch dpms off"
-            resume_command "hyprctl dispatch dpms on"
+            command "dpms-off"
+            resume_command "dpms-on"
           end
 
           lock_screen:

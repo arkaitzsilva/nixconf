@@ -13,7 +13,7 @@
           indicator-format = "line";
         };
         cursor = {
-          blink = "yes";
+          blink = "no";
         };
         key-bindings = {
           scrollback-up-page= "Page_Up";

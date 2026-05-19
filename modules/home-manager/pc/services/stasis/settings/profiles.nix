@@ -27,8 +27,8 @@
 
         dpms:
           timeout 300
-          command "hyprctl dispatch dpms off"
-          resume_command "hyprctl dispatch dpms on"
+          command "dpms-off"
+          resume_command "dpms-on"
         end
 
         suspend:
