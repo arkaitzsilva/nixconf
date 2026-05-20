@@ -1,8 +1,8 @@
 {
-  flake.modules.homeManager.pc = { pkgs, ... }: {
+  flake.modules.homeManager.pc = { config, ... }: {
     gtk.gtk4.theme = {
-      name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
+      name = config.gtk.theme.name;
+      package = config.gtk.theme.package;
     };
   };
 }

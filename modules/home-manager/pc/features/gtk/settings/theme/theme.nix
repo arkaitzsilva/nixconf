@@ -1,8 +1,8 @@
 {
   flake.modules.homeManager.pc = { pkgs, ... }: {
-    gtk.gtk3.theme = {
-      package = pkgs.adw-gtk3;
+    gtk.theme = {
       name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
     };
   };
 }
