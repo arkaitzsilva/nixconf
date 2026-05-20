@@ -2,8 +2,8 @@
   flake.modules.homeManager.pc = { lib, config, osConfig, ... }: lib.mkIf osConfig.programs.niri.enable {
     xdg.configFile."niri/misc.kdl".text = ''
       cursor {
-        xcursor-theme "${config.cursor.theme.name}"
-        xcursor-size ${toString config.cursor.theme.size}
+        xcursor-theme "${config.style.cursor-theme.name}"
+        xcursor-size ${toString config.style.cursor-theme.size}
         hide-when-typing
         hide-after-inactive-ms 10000
       }

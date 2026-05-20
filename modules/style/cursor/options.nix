@@ -1,6 +1,6 @@
 {
   flake.modules.homeManager.pc = { lib, ... }: {
-    options.cursor.theme = {
+    options.style.cursor-theme = {
       name = lib.mkOption {
         type = lib.types.singleLineStr;
         default = null;

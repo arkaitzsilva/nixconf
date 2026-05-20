@@ -1,5 +1,3 @@
 {
-  config.theme ={
-    name = "nord";
-  };
+  config.style.color-scheme.name = "nord";
 }
