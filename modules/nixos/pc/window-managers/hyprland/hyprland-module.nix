@@ -2,7 +2,7 @@
   flake.modules.nixos.pc = { lib, config, pkgs, ... }:
     let
       hyprland = withSystem pkgs.stdenv.hostPlatform.system ( { inputs', ... }: inputs'.hyprnix.packages.hyprland );
-      cfg = config.programs.niri;
+      cfg = config.programs.hyprland;
     in {
       # Disable NixOS module
       disabledModules = [

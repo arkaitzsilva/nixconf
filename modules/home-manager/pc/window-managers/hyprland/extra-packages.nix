@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.pc = { lib, osConfig, pkgs, ... }: lib.mkIf osConfig.programs.hyprland.enable {
+  flake.modules.homeManager.pc = { lib, config, pkgs, ... }: lib.mkIf config.wayland.windowManager.hyprland.enable {
     home.packages = with pkgs; [
       xwayland
       brightnessctl

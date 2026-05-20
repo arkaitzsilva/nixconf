@@ -1,5 +1,5 @@
 {
   flake.modules.nixos.pc = {
-    programs.niri.enable = true;
+    programs.niri.enable = false;
   };
 }
