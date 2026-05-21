@@ -6,10 +6,10 @@
       "preview-fg" = base04;
       "preview-bg" = base00;
       "hl" = base0C;
-      "fg+" = base00;
-      "bg+" = base0C;
+      "fg+" = base04;
+      "bg+" = base02;
       "gutter" = base00;
-      "hl+" = base06;
+      "hl+" = base0C;
       "info" = base0B;
       "border" = base03;
       "prompt" = base0C;
