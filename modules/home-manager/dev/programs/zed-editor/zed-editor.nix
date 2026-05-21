@@ -1,5 +1,5 @@
 {
   flake.modules.homeManager.dev = {
-   programs.git.enable = true;
+    programs.zed-editor.enable = true;
   };
 }

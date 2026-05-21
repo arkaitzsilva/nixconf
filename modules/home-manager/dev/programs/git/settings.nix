@@ -1,5 +1,5 @@
 { config, ... }: {
-  flake.modules.homeManager.base = {
+  flake.modules.homeManager.dev = {
    programs.git.settings = {
       user = {
         name = config.flake.meta.owner.git.user.name;
