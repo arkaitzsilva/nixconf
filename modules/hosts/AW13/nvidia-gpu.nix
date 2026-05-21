@@ -1,9 +1,9 @@
 {
-  nixpkgs.config.allowUnfreePackages = [
+    nixpkgs.config.allowUnfreePackages = [
     "nvidia-x11"
     "nvidia-kernel-modules"
   ];
-  
+
   configurations.nixos.AW13.module = { config, lib, ... }: {
     hardware.graphics = {
       enable = true;
@@ -21,7 +21,7 @@
 
       # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
       # Enable this if you have graphical corruption issues or application crashes after waking
-      # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+      # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
       # of just the bare essentials.
       powerManagement.enable = false;
 
@@ -31,9 +31,9 @@
 
       # Use the NVidia open source kernel module (not to be confused with the
       # independent third-party "nouveau" open source driver).
-      # Support is limited to the Turing and later architectures. Full list of 
-      # supported GPUs is at: 
-      # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+      # Support is limited to the Turing and later architectures. Full list of
+      # supported GPUs is at:
+      # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
       # Only available from driver 515.43.04+
       open = false;
 
@@ -42,14 +42,7 @@
       nvidiaSettings = false;
 
       # Optionally, you may need to select the appropriate driver version for your specific GPU.
-      package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-        version = "580.159.03";
-        sha256_64bit = "sha256-MshdmbD2QMlQH2GzndrSCP0CiNAVxPvF/QQ1wHeD+nc=";
-        sha256_aarch64 = lib.fakeSha256;
-        openSha256 = lib.fakeSha256;
-        settingsSha256 = lib.fakeSha256;
-        persistencedSha256 = lib.fakeSha256;
-      };
+      package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
 
       prime = {
         offload = {
