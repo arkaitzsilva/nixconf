@@ -1,24 +1,16 @@
 {
-  flake.modules.homeManager.base = { pkgs, ... }:
-  let
-    ohMyZshPlugin = name: {
-      inherit name;
-      src = pkgs.fetchFromGitHub {
-        owner = "ohmyzsh";
-        repo = "ohmyzsh";
-        rev = "master";
-        hash = "sha256-A6HKwOEyd4jjbWbE5HjCVX9KgfG/jEHi7keSP5Ye/lg=";
-      };
-      file = "plugins/${name}/${name}.plugin.zsh";
-    };
-  in {
+  flake.modules.homeManager.base = { pkgs, ... }: {
     programs.zsh.plugins = [
       {
         name = "fzf-tab";
         src = pkgs.zsh-fzf-tab;
         file = "share/fzf-tab/fzf-tab.plugin.zsh";
       }
-      (ohMyZshPlugin "git")
+      {
+        name = "git";
+        src = pkgs.oh-my-zsh;
+        file = "share/oh-my-zsh/plugins/git/git.plugin.zsh";
+      }
     ];
   };
 }
