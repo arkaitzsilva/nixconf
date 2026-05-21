@@ -1,10 +1,14 @@
 {
-    nixpkgs.config.allowUnfreePackages = [
+  nixpkgs.config.allowUnfreePackages = [
     "nvidia-x11"
     "nvidia-kernel-modules"
   ];
 
-  configurations.nixos.AW13.module = { config, lib, ... }: {
+  configurations.nixos.AW13.module = { config, pkgs, ... }: {
+    environment.systemPackages = [
+      pkgs.vulkan-tools
+    ];
+    
     hardware.graphics = {
       enable = true;
     };
