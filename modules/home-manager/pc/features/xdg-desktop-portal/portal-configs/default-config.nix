@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.pc = {
+  flake.modules.homeManager.pc = {
     xdg.portal.config.common.default = "*";
   };
 }

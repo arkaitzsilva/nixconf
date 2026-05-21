@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.pc = { pkgs, ... }: {
+  flake.modules.homeManager.pc = { pkgs, ... }: {
     xdg.portal.extraPortals = with pkgs; [
       xdg-desktop-portal-luminous
       xdg-desktop-portal-termfilechooser
