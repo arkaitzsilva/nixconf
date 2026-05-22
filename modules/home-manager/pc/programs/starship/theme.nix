@@ -18,10 +18,10 @@
         style = "bold fg:${base07}";
         format = "[$all_status$ahead_behind]($style)";
         conflicted = "";
-        ahead = "⇡\${count}";
-        behind = "⇣\${count}";
+        ahead = "⇡";
+        behind = "⇣";
         diverged = "";
-        staged = "*";
+        staged = "";
         modified = "*";
         up_to_date = "";
       };
@@ -30,7 +30,7 @@
         style = "bold fg:${base04}";
         format = "[$duration]($style)";
         min_time = 5000;
-        show_milliseconds = true;
+        show_milliseconds = false;
       };
 
       character = {
