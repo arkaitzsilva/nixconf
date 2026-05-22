@@ -1,5 +1,5 @@
 {
   flake.modules.homeManager.base = { osConfig, ... }: {
-    programs.zsh.enable = osConfig.programs.zsh.enable;
+    programs.fish.enable = osConfig.programs.fish.enable;
   };
 }
