@@ -1,5 +1,5 @@
 {
   flake.modules.homeManager.pc = {
-    programs.foot.enable = true;
+    programs.kitty.enable = true;
   };
 }
