@@ -11,10 +11,10 @@
         footer_border = base03;
 
         # Border Active
-        file_panel_border_active = base04;
-        sidebar_border_active = base0E;
-        footer_border_active = base0E;
-        modal_border_active = base03;
+        file_panel_border_active = base0C;
+        sidebar_border_active = base0C;
+        footer_border_active = base0C;
+        modal_border_active = base0C;
 
         # Background (bg)
         full_screen_bg = base00;
