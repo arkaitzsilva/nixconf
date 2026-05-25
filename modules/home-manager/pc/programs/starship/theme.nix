@@ -24,8 +24,8 @@
         up_to_date = "";
         untracked = "";
         stashed = "";
-        modified = "*";
-        staged = "";
+        modified = "";
+        staged = "*";
         renamed = "";
         deleted = "";
       };
