@@ -21,9 +21,13 @@
         ahead = "⇡";
         behind = "⇣";
         diverged = "";
-        staged = "";
-        modified = "*";
         up_to_date = "";
+        untracked = "";
+        stashed = "";
+        modified = "*";
+        staged = "";
+        renamed = "";
+        deleted = "";
       };
 
       cmd_duration = {

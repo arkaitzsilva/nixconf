@@ -2,11 +2,6 @@
   flake.modules.homeManager.pc = {
     programs.yazi.settings = {
       plugin = {
-        prepend_fetchers = [
-          { id = "git"; name = "*";  run = "git"; }
-          { id = "git"; name = "*/"; run = "git"; }
-        ];
-
         prepend_previewers = [
           { mime = "application/*zip";            run = "ouch"; }
           { mime = "application/x-tar";           run = "ouch"; }
