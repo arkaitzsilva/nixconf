@@ -13,7 +13,6 @@
         cursor_trail = 200;
         cursor_trail_decay = "0.1 0.3";
         cursor_trail_start_threshold = 3;
-        cursor_trail_color = "none";
       };
     };
   };
