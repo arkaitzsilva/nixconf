@@ -7,7 +7,7 @@
         bold_font = "auto";
         italic_font = "auto";
         bold_italic_font = "auto";
-        window_padding_width = 10;
+        window_padding_width = 8;
         cursor_shape = "block";
         cursor_blink_interval = 0.5;
         cursor_trail = 200;
