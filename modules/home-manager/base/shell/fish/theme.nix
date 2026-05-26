@@ -11,8 +11,8 @@
       set fish_color_error ${base08}
       set fish_color_param ${base0C}
       set fish_color_comment ${base03}
-      set fish_color_selection --background=${base02}
-      set fish_color_search_match --background=${base02}
+      set fish_color_selection --background=${base01}
+      set fish_color_search_match --background=${base01}
       set fish_color_operator ${base0C}
       set fish_color_escape ${base09}
       set fish_color_autosuggestion ${base03}
@@ -35,7 +35,7 @@
       set fish_pager_color_prefix ${base0C}
       set fish_pager_color_completion ${base04}
       set fish_pager_color_description ${base04}
-      set fish_pager_color_selected_background --background=${base02}
+      set fish_pager_color_selected_background --background=${base01}
       set fish_pager_color_selected_prefix ${base0C}
       set fish_pager_color_selected_completion ${base04}
       set fish_pager_color_selected_description ${base04}
