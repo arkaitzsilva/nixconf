@@ -12,11 +12,11 @@
 
             secondary = {
               dark = base0C;
-              light = base0C;
+              light = base0F;
             };
 
             accent = {
-              dark = base07;
+              dark = base0F;
               light = base07;
             };
 
@@ -26,8 +26,8 @@
             };
 
             warning = {
-              dark = base09;
-              light = base09;
+              dark = base0A;
+              light = base0A;
             };
 
             success = {
@@ -36,17 +36,17 @@
             };
 
             info = {
-              dark = base0D;
+              dark = base0C;
               light = base0F;
             };
 
             text = {
-              dark = base06;
+              dark = base05;
               light = base00;
             };
 
             textMuted = {
-              dark = base0D;
+              dark = base04;
               light = base01;
             };
 
@@ -61,7 +61,7 @@
             };
 
             backgroundElement = {
-              dark = base02;
+              dark = base01;
               light = base04;
             };
 
@@ -91,12 +91,12 @@
             };
 
             diffContext = {
-              dark = base0D;
+              dark = base03;
               light = base03;
             };
 
             diffHunkHeader = {
-              dark = base0D;
+              dark = base03;
               light = base03;
             };
 
@@ -126,8 +126,8 @@
             };
 
             diffLineNumber = {
-              dark = base07;
-              light = base01;
+              dark = base03;
+              light = base04;
             };
 
             diffAddedLineNumberBg = {
@@ -141,22 +141,22 @@
             };
 
             markdownText = {
-              dark = base04;
+              dark = base05;
               light = base00;
             };
 
             markdownHeading = {
-              dark = base0D;
+              dark = base0E;
               light = base0F;
             };
 
             markdownLink = {
-              dark = base0C;
-              light = base0C;
+              dark = base0D;
+              light = base0D;
             };
 
             markdownLinkText = {
-              dark = base07;
+              dark = base0C;
               light = base07;
             };
 
@@ -166,22 +166,22 @@
             };
 
             markdownBlockQuote = {
-              dark = base0D;
-              light = base03;
+              dark = base03;
+              light = base01;
             };
 
             markdownEmph = {
-              dark = base09;
+              dark = base0A;
               light = base09;
             };
 
             markdownStrong = {
-              dark = base0A;
+              dark = base09;
               light = base0A;
             };
 
             markdownHorizontalRule = {
-              dark = base0D;
+              dark = base04;
               light = base03;
             };
 
@@ -191,38 +191,38 @@
             };
 
             markdownListEnumeration = {
-              dark = base07;
+              dark = base0C;
               light = base07;
             };
 
             markdownImage = {
-              dark = base0C;
-              light = base0C;
+              dark = base0D;
+              light = base0D;
             };
 
             markdownImageText = {
-              dark = base07;
+              dark = base0C;
               light = base07;
             };
 
             markdownCodeBlock = {
-              dark = base04;
+              dark = base01;
               light = base00;
             };
 
             syntaxComment = {
-              dark = base0D;
+              dark = base04;
               light = base03;
             };
 
             syntaxKeyword = {
-              dark = base0C;
-              light = base0C;
+              dark = base0E;
+              light = base0D;
             };
 
             syntaxFunction = {
               dark = base0D;
-              light = base0D;
+              light = base0C;
             };
 
             syntaxVariable = {
@@ -236,22 +236,22 @@
             };
 
             syntaxNumber = {
-              dark = base0E;
+              dark = base09;
               light = base0E;
             };
 
             syntaxType = {
-              dark = base07;
+              dark = base0A;
               light = base07;
             };
 
             syntaxOperator = {
               dark = base0C;
-              light = base0C;
+              light = base0D;
             };
 
             syntaxPunctuation = {
-              dark = base04;
+              dark = base05;
               light = base00;
             };
           };
