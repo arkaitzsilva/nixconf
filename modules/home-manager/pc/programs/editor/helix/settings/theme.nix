@@ -24,7 +24,7 @@
           "diagnostic.warning" = { underline = { color = base0A; style = "curl"; }; };
           "warning" = base0A;
           "diagnostic.unnecessary" = { modifiers = [ "dim" ]; };
-          "diagnostic.deprecated" = { modifiers = [ "crossed_out" ]; };
+          "diagnostic.deprecated" = { fg = base04; underline = { color = base0A; style = "line"; }; };
 
           "diff.delta" = base0A;
           "diff.minus" = base08;
@@ -74,7 +74,7 @@
           "operator" = base0D;
           "special" = base0D;
           "tag" = base0D;
-          "comment" = { fg = base03; modifiers = [ "italic" ]; };
+          "comment" = { fg = base03; };
 
           # --- EDITOR UI ---
           "ui.background" = { bg = base00; };
@@ -99,7 +99,7 @@
           "ui.cursor" = { fg = base04; modifiers = [ "reversed" ]; };
           "ui.cursorcolumn.primary" = { bg = base01; };
           "ui.cursorline.primary" = { bg = base02; };
-          "ui.cursor.match" = { bg = base03; };
+          "ui.cursor.match" = { fg = base0C; bg = base03; };
           "ui.selection" = { bg = base02; };
           "ui.highlight" = { fg = base0C; bg = base02; };
 
@@ -110,7 +110,7 @@
           "ui.statusline.select" = { fg = base01; bg = base07; };
           "ui.statusline.separator" = base03;
 
-          "ui.virtual.indent-guide" = base03;
+          "ui.virtual.indent-guide" = base02;
           "ui.virtual.inlay-hint" = { fg = base03; modifiers = [ "italic" ]; };
           "ui.virtual.jump-label" = { fg = base08; modifiers = [ "bold" ]; };
           "ui.virtual.ruler" = { bg = base01; };
