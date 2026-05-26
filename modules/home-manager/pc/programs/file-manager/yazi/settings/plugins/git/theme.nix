@@ -1,7 +1,6 @@
 {
   flake.modules.homeManager.pc = { config, ... }: {
     programs.yazi.theme."git" = with config.scheme.withHashtag;{
-      unknown_sign  = "?";
       modified_sign = "M";
       added_sign = "A";
       untracked_sign = "?";
@@ -9,7 +8,6 @@
       deleted_sign = "!";
       updated_sign = "U";
 
-      unknown = { fg = base03; };
       modified = { fg = base0A; };
       added = { fg = base0B; };
       untracked = { fg = base04; };
