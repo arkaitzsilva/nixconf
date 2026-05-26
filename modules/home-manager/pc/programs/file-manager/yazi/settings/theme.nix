@@ -121,8 +121,8 @@
           { mime = "application/*zip";                               fg = base0E; }
           { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}"; fg = base0E; }
           { mime = "application/{pdf,doc,rtf}";                      fg = base0B; }
-          { name = "*";                                              fg = base06; }
-          { name = "*/";                                             fg = base0C; }
+          { url = "*";                                               fg = base06; }
+          { url = "*/";                                              fg = base0C; }
         ];
       };
 
