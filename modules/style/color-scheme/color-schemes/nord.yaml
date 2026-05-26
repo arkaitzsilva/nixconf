@@ -1,6 +1,7 @@
 system: "base16"
 name: "Nord"
-author: "arcticicestudio"
+description: "A arctic, north-bluish clean and elegant Visual Studio Code theme."
+author: "Arctic Ice Studio"
 variant: "dark"
 palette:
   base00: "#2E3440"
