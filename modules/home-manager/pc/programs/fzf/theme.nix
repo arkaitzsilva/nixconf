@@ -7,7 +7,7 @@
       "preview-bg" = base00;
       "hl" = base0C;
       "fg+" = base04;
-      "bg+" = base02;
+      "bg+" = base01;
       "gutter" = base00;
       "hl+" = base0C;
       "info" = base0B;
