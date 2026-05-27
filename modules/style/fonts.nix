@@ -6,6 +6,7 @@ let
     noto-fonts-monochrome-emoji
     cascadia-code
     nerd-fonts.fira-code
+    orbitron
   ];
   
   polyModule = {

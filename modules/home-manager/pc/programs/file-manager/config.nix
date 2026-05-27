@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.pc = { lib, config, ... }: lib.mkIf config.programs.yazi.enable {
+  flake.modules.homeManager.pc = { lib, config, ... }: {
     file-manager = {
       name = "yazi";
       path = lib.getExe config.programs.yazi.package;

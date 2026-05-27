@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.pc = { config, ... }: {
     programs.zoxide = {
-      enableFishIntegration = config.programs.fish.enable;
+      enableZshIntegration = config.programs.zsh.enable;
     };
   };
 }

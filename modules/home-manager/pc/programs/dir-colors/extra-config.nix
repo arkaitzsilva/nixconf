@@ -47,6 +47,7 @@
         TERM xterm-88color
         TERM xterm-256color
         TERM xterm-kitty
+        TERM foot
       '';
     };
   };

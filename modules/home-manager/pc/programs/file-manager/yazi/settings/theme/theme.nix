@@ -18,8 +18,6 @@
 
         border_symbol = "│";
         border_style  = { fg = base03; };
-
-        syntect_theme = "~/.config/yazi/${config.scheme.slug}.tmTheme";
       };
 
       indicator = {

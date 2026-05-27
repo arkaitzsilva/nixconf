@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:niri-wm/niri/v26.04";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     base16.url = "github:SenchoPens/base16.nix";
   };
 
