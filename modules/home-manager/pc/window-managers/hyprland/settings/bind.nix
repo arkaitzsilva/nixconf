@@ -1,42 +1,186 @@
 {
-  flake.modules.homeManager.pc = { config, ... }: {
-    wayland.windowManager.hyprland.settings = {
+  flake.modules.homeManager.pc = { lib, config, ... }: {
+    wayland.windowManager.hyprland.settings = with lib.generators; {
+      mod = {
+        _var = "SUPER";
+      };
+
       bind = [
-        "SUPER, Return, exec, ${config.terminal.path}"
-        "SUPER, E, exec, ${config.file-manager.open-cmd}"
+        # App launchers
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + E\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"${config.file-manager.start-cmd}\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + Return\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"${config.terminal.start-cmd}\")")
+          ];
+        }
 
-        "SUPER SHIFT, E, exit,"
+        # Close session
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + SHIFT + E\"")
+            (mkLuaInline "hl.dsp.exit()")
+          ];
+        }
 
-        "SUPER, Q, killactive,"
+        # Window actions
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + Q\"")
+            (mkLuaInline "hl.dsp.window.close()")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + S\"")
+            (mkLuaInline "hl.dsp.window.float({ action = \"toggle\" })")
+          ];
+        }
 
-        "SUPER, S, togglefloating"
+        # Move window
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + ALT + left\"")
+            (mkLuaInline "hl.dsp.window.move({ direction = \"left\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + ALT + right\"")
+            (mkLuaInline "hl.dsp.window.move({ direction = \"right\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + ALT + up\"")
+            (mkLuaInline "hl.dsp.window.move({ direction = \"up\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + ALT + down\"")
+            (mkLuaInline "hl.dsp.window.move({ direction = \"down\" })")
+          ];
+        }
 
-        "SUPER, left, movefocus, l"
-        "SUPER, right, movefocus, r"
-        "SUPER, up, movefocus, u"
-        "SUPER, down, movefocus, d"
+        # Focus window
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + left\"")
+            (mkLuaInline "hl.dsp.focus({ direction = \"left\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + right\"")
+            (mkLuaInline "hl.dsp.focus({ direction = \"right\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + up\"")
+            (mkLuaInline "hl.dsp.focus({ direction = \"up\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + down\"")
+            (mkLuaInline "hl.dsp.focus({ direction = \"down\" })")
+          ];
+        }
 
-        "SUPER ALT, left, movewindow, l"
-        "SUPER ALT, right, movewindow, r"
-        "SUPER ALT, up, movewindow, u"
-        "SUPER ALT, down, movewindow, d"
+        # Move window to workspace
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + ALT + next\"")
+            (mkLuaInline "hl.dsp.window.move({ workspace = \"+1\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + ALT + prior\"")
+            (mkLuaInline "hl.dsp.window.move({ workspace = \"-1\" })")
+          ];
+        }
 
-        "SUPER, next, workspace, +1"
-        "SUPER, prior, workspace, -1"
+        # Focus workspace
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + next\"")
+            (mkLuaInline "hl.dsp.focus({ workspace = \"+1\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInline "mod .. \" + prior\"")
+            (mkLuaInline "hl.dsp.focus({ workspace = \"-1\" })")
+          ];
+        }
 
-        "SUPER ALT, next, movetoworkspace, +1"
-        "SUPER ALT, prior, movetoworkspace, -1"
+        # Multimedia
+        {
+          _args = [
+            "XF86AudioMute"
+            (mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle\")")
+            { locked = true; }
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioLowerVolume"
+            (mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-\")")
+            { locked = true; repeating = true; }
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioRaiseVolume"
+            (mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+\")")
+            { locked = true; repeating = true; }
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioPlay"
+            (mkLuaInline "hl.dsp.exec_cmd(\"playerctl play-pause\")")
+            { locked = true; }
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioPrev"
+            (mkLuaInline "hl.dsp.exec_cmd(\"playerctl previous\")")
+            { locked = true; }
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioNext"
+            (mkLuaInline "hl.dsp.exec_cmd(\"playerctl next\")")
+            { locked = true; }
+          ];
+        }
 
-        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioPlay, exec, playerctl play-pause"
-        ",XF86AudioPrev, exec, playerctl previous"
-        ",XF86AudioNext, exec, playerctl next"
-
-        ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
-        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-
-        ",XF86MonBrightnessUp, exec, brightnessctl set 20%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl set 20%-"
+        # Brightness
+        {
+          _args = [
+            "XF86MonBrightnessUp"
+            (mkLuaInline "hl.dsp.exec_cmd(\"brightnessctl set 20%+\")")
+            { locked = true; repeating = true; }
+          ];
+        }
+        {
+          _args = [
+            "XF86MonBrightnessDown"
+            (mkLuaInline "hl.dsp.exec_cmd(\"brightnessctl set 20%-\")")
+            { locked = true; repeating = true; }
+          ];
+        }
       ];
     };
   };

@@ -1,9 +1,19 @@
 {
-  flake.modules.homeManager.pc = { config, ... }: {
-    wayland.windowManager.hyprland.settings = {
+  flake.modules.homeManager.pc = { lib, config, ... }: {
+    wayland.windowManager.hyprland.settings = with lib.generators; {
       env = [
-        "XCURSOR_THEME,${config.style.cursor-theme.name}"
-        "XCURSOR_SIZE,${toString config.style.cursor-theme.size}"
+        {
+          _args = [
+            "XCURSOR_THEME"
+            (mkLuaInline "\"${config.style.cursor-theme.name}\"")
+          ];
+        }
+        {
+          _args = [
+            "XCURSOR_SIZE"
+            (mkLuaInline "\"${toString config.style.cursor-theme.size}\"")
+          ];
+        }
       ];
     };
   };

@@ -1,15 +1,19 @@
 {
   flake.modules.homeManager.pc = {
     wayland.windowManager.hyprland.settings = {
-      windowrule = [
+      window_rule = [
         {
-          name = "xdg-portals-float";
-          "match:class" = "^(xdg-desktop-portal.*)$";
-          float = "on";
-          size = "1200 800";
-          center = "on";
-          stay_focused = "on";
-          animation = "popin";
+          _args = [
+            {
+              name = "xdg-portals-float";
+              match = { class = "^(xdg-desktop-portal.*)$"; };
+              float = true;
+              size = "1200 800";
+              center = true;
+              stay_focused = true;
+              animation = "popin";
+            }
+          ];
         }
       ];
     };

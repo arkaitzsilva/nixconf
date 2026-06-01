@@ -1,9 +1,18 @@
 {
   flake.modules.homeManager.pc = { lib, config, ... }: {
     wayland.windowManager.hyprland.settings = {
-      exec-once = [
-        "${config.wallpaper.start-cmd}"
-      ] ++ lib.optionals config.services.stasis.enable [ "systemctl --user start stasis" ];
-    };   
+      on = {
+        _args = [
+          "hyprland.start"
+          (lib.generators.mkLuaInline ''
+            function()
+              hl.exec_cmd("${config.wallpaper.start-cmd}")
+              ${lib.optionalString config.services.stasis.enable "hl.exec_cmd(\"systemctl --user start stasis\")"}
+              ${lib.optionalString config.services.stasis.enable "hl.exec_cmd(\"kitty --single-instance --start-as=hidden\")"}
+            end
+          '')
+        ];
+      };
+    };
   };
 }

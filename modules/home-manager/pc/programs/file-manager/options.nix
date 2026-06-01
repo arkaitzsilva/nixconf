@@ -9,7 +9,7 @@
         type = lib.types.path;
         default = null;
       };
-      open-cmd = lib.mkOption {
+      start-cmd = lib.mkOption {
         type = lib.types.singleLineStr;
         default = null;
       };

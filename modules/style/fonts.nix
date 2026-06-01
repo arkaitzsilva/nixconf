@@ -4,9 +4,10 @@ let
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
     noto-fonts-monochrome-emoji
-    cascadia-code
     nerd-fonts.fira-code
-    orbitron
+    nerd-fonts.iosevka-term
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.terminess-ttf
   ];
   
   polyModule = {
