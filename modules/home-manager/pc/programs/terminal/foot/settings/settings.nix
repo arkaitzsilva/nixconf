@@ -1,13 +1,13 @@
 {
-  flake.modules.homeManager.pc = {
+  flake.modules.homeManager.pc = { config, ... }: {
     programs.foot = {
       settings = {
         main = {
           gamma-correct-blending = "no";
-          font = "FiraCode Nerd Font:size=11";
+          font = "${config.terminal.font-family}:size=${toString config.terminal.font-size}";
           letter-spacing = 0;
           dpi-aware = "no";
-          pad = "10x10";
+          pad = "8x8";
         };
         scrollback = {
           indicator-format = "line";
