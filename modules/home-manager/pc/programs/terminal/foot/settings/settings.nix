@@ -7,7 +7,7 @@
           font = "${config.terminal.font-family}:size=${toString config.terminal.font-size}";
           letter-spacing = 0;
           dpi-aware = "no";
-          pad = "8x8";
+          pad = "10x10";
         };
         scrollback = {
           indicator-format = "line";

@@ -8,6 +8,7 @@ let
     nerd-fonts.iosevka-term
     nerd-fonts.caskaydia-cove
     nerd-fonts.terminess-ttf
+    nerd-fonts.meslo-lg
   ];
   
   polyModule = {

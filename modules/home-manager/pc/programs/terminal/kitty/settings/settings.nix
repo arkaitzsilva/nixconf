@@ -6,8 +6,6 @@
         font_family = config.terminal.font-family;
         font_size = config.terminal.font-size;
 
-        # adjust_column_width = "110%";
-
         window_padding_width = 8;
 
         cursor_shape = "block";

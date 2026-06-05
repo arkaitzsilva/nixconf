@@ -14,11 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprnix = {
-      url = "github:hyprwm/hyprnix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     niri = {
       url = "github:niri-wm/niri/v26.04";
       inputs.nixpkgs.follows = "nixpkgs";
