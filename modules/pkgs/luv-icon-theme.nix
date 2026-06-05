@@ -1,19 +1,19 @@
 {
   perSystem = { pkgs, ... }: {
-    packages.nx-cursor-theme = pkgs.stdenvNoCC.mkDerivation {
-      pname = "nx-cursor-theme";
-      version = "1.1";
+    packages.luv-icon-theme = pkgs.stdenvNoCC.mkDerivation {
+      pname = "luv-icon-theme";
+      version = "1.0";
 
       src = pkgs.fetchFromGitHub {
         owner = "arkaitzsilva";
-        repo = "nx-cursor-theme";
+        repo = "luv-icon-theme";
         rev = "main";
-        hash = "sha256-Ow3a031JJmNtcRrIfskv1CLp1yqPSjlyaqPn4LtDmII=";
+        hash = "sha256-wMRBTZzGtH8SQMCq8E/HmKjRaxvH6CNurssPZ+/jbms=";
       };
 
       installPhase = ''
         mkdir -p $out/share/icons
-        for theme in "Nx" "Nx-Snow"; do
+        for theme in "Luv-Dark"; do
           cp -r $theme $out/share/icons
         done
       '';

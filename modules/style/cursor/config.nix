@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.pc = {
     style.cursor-theme = {
-      name = "Nx_Snow";
+      name = "Nx-Snow";
       size = 24;
     };
   };

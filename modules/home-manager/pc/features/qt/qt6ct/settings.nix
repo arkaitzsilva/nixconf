@@ -2,8 +2,9 @@
   flake.modules.homeManager.pc = { config, lib, ... }: lib.mkIf config.qt.enable {
     qt.qt6ctSettings = {
       Appearance = {
-        style = "${config.qt.style.name}";
+        style = config.qt.style.name;
         standard_dialogs = "xdgdesktopportal";
+        icon_theme = config.style.icon-theme.name;
       };
 
       Fonts = {
