@@ -5,7 +5,7 @@
       foreground = base05;
       selection_background = base03;
       selection_foreground = base05;
-      cursor = base05;
+      cursor = base0C;      
       cursor_text_color = base00;
       cursor_trail_color = base0C;
       url_color = base04;

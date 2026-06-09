@@ -51,14 +51,14 @@
             };
           };
           hints = {
-            bg       = base01;
-            fg       = base04;
-            match.fg = base0C;
+            bg       = base0C;
+            fg       = base00;
+            match.fg = base06;
           };
           keyhint = {
-            bg        = base01;
-            fg        = base0C;
-            suffix.fg = base04;
+            bg        = base00;
+            fg        = base04;
+            suffix.fg = base03;
           };
           messages = {
             error = {
