@@ -8,7 +8,7 @@
     environment.systemPackages = [
       pkgs.vulkan-tools
     ];
-    
+
     hardware.graphics = {
       enable = true;
     };

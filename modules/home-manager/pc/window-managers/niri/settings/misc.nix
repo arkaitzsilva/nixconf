@@ -16,8 +16,7 @@
         skip-at-startup
       }
       screenshot-path "${config.xdg.userDirs.pictures}/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-      
-      spawn-sh-at-startup "${config.wallpaper.start-cmd}"
+
       ${lib.optionalString config.services.stasis.enable "spawn-sh-at-startup \"systemctl --user start stasis\""}
       ${lib.optionalString config.programs.kitty.enable "spawn-sh-at-startup \"kitty --single-instance --start-as=hidden\""}
     '';
