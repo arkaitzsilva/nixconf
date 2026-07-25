@@ -6,6 +6,7 @@
       pstree
       asciiquarium
       gifsicle
+      tree
     ];
   };
 }

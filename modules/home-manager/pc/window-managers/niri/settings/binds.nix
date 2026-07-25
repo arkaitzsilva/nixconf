@@ -6,6 +6,8 @@
 
         Mod+Return hotkey-overlay-title="Open a Terminal: ${config.terminal.name}" { spawn-sh "${config.terminal.start-cmd}"; }
         Mod+E hotkey-overlay-title="Open a file manager: ${config.file-manager.name}" { spawn-sh "${config.file-manager.start-cmd}"; }
+        Mod+R hotkey-overlay-title="Toggle launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+        Mod+Shift+Q hotkey-overlay-title="Toggle session" { spawn-sh "noctalia msg panel-toggle session"; } 
 
         Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
@@ -118,7 +120,6 @@
 
         Mod+Period { expel-window-from-column; }
 
-        Mod+R { switch-preset-column-width; }
         Mod+Shift+R { switch-preset-window-height; }
         Mod+Ctrl+R { reset-window-height; }
         Mod+F { maximize-column; }

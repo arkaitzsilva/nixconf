@@ -14,13 +14,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprnix = {
-      url = "github:hyprwm/hyprnix";
+    niri = {
+      url = "github:niri-wm/niri/v26.04";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:niri-wm/niri/v26.04";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

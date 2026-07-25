@@ -28,12 +28,6 @@
           command "notify-send -a Stasis 'Stasis started!'"
         end
 
-        early_dpms:
-          timeout 300
-          command "dpms-off"
-          resume_command "dpms-on"
-        end
-
         lock_screen:
           timeout lock_after
           command "hyprlock"
@@ -69,17 +63,17 @@
           end
 
           dpms:
-            timeout 60
+            timeout 240
             command "dpms-off"
             resume_command "dpms-on"
           end
 
-          lock_screen:
-            timeout 120
-            command "hyprlock"
-            notification "Locking on AC in 10s"
-            notify_seconds_before 10
-          end
+          #lock_screen:
+          #  timeout 180
+          #  command "hyprlock"
+          #  notification "Locking on AC in 10s"
+          #  notify_seconds_before 10
+          #end
 
           suspend:
             timeout 300
@@ -100,16 +94,16 @@
           end
 
           dpms:
-            timeout 30
+            timeout 120
             command "dpms-off"
             resume_command "dpms-on"
           end
 
-          lock_screen:
-            timeout 120
-            command "hyprlock"
-            resume_command "notify-send 'Welcome back $env.USER!'"
-          end
+          #lock_screen:
+          #  timeout 90
+          #  command "hyprlock"
+          #  resume_command "notify-send 'Welcome back $env.USER!'"
+          #end
 
           suspend:
             timeout 120

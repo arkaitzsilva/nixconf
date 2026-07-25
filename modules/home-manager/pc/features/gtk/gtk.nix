@@ -4,7 +4,7 @@
       gtk.enable = true;
     };
     nixos.pc = {
-      programs.dconf.enable = false;
+      programs.dconf.enable = true;
     };
   };
 }

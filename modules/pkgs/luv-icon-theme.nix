@@ -8,7 +8,7 @@
         owner = "arkaitzsilva";
         repo = "luv-icon-theme";
         rev = "main";
-        hash = "sha256-wMRBTZzGtH8SQMCq8E/HmKjRaxvH6CNurssPZ+/jbms=";
+        hash = "sha256-AAsyDwx2YBCsf1ZDnvkZEsGaSq+ag/GmyCHYNKMy/BQ=";
       };
 
       installPhase = ''

@@ -1,5 +1,5 @@
 {
   flake.modules.homeManager.pc = {
-    qt.enable = true;
+    programs.noctalia.enable = true;
   };
 }
