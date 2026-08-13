@@ -1,23 +1,24 @@
 {
-  flake.modules.homeManager.pc = { lib, config, osConfig, ... }: lib.mkIf osConfig.programs.niri.enable {
-    xdg.configFile."niri/window-rules.kdl".text = ''
-      window-rule {
-        open-maximized-to-edges false
+  flake.modules.homeManager.pc = { config, ... }: {
+    wayland.windowManager.niri.settings._children = [
+      { "window-rule" = { "open-maximized-to-edges" = false; }; }
+      { "window-rule" = {
+          "geometry-corner-radius" = 10;
+          "clip-to-geometry" = true;
+        };
       }
-      window-rule {
-        geometry-corner-radius 10
-        clip-to-geometry true
+      { "window-rule" = {
+          match._props."app-id" = config.terminal.name;
+          "default-column-width" = { proportion = 0.5; };
+        };
       }
-      window-rule {
-        match app-id="${config.terminal.name}"
-        default-column-width { proportion 0.5; }
+      { "window-rule" = {
+          match._props."app-id" = "^(xdg-desktop-portal.*)$";
+          "open-floating" = true;
+          "default-column-width" = { fixed = 1200; };
+          "default-window-height" = { fixed = 800; };
+        };
       }
-      window-rule {
-        match app-id=r#"^(xdg-desktop-portal.*)$"#
-        open-floating true
-        default-column-width { fixed 1200; }
-        default-window-height { fixed 800; }
-      }
-    '';
+    ];
   };
 }

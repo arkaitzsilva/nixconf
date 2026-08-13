@@ -1,35 +1,28 @@
 {
-  flake.modules.homeManager.pc = { lib, config, osConfig, ... }: with config.scheme.withHashtag; lib.mkIf osConfig.programs.niri.enable {
-    xdg.configFile."niri/recent-windows.kdl".text = ''
-      recent-windows {
-        debounce-ms 750
-
-        open-delay-ms 150
-
-        highlight {
-          padding 30
-          corner-radius 20
-          active-color "${base0C}"
-          urgent-color "${base08}"
-        }
-
-        previews {
-          max-height 480
-          max-scale 0.5
-        }
-
-        binds {
-          Alt+Tab         { next-window; }
-          Alt+Shift+Tab   { previous-window; }
-          Alt+grave       { next-window     filter="app-id"; }
-          Alt+Shift+grave { previous-window filter="app-id"; }
-
-          Mod+Tab         { next-window; }
-          Mod+Shift+Tab   { previous-window; }
-          Mod+grave       { next-window     filter="app-id"; }
-          Mod+Shift+grave { previous-window filter="app-id"; }
-        }    
-      }
-    '';
+  flake.modules.homeManager.pc = { config, ... }: {
+    wayland.windowManager.niri.settings."recent-windows" = {
+      "debounce-ms" = 750;
+      "open-delay-ms" = 150;
+      highlight = {
+        padding = 30;
+        "corner-radius" = 20;
+        "active-color" = config.scheme.withHashtag.base0C;
+        "urgent-color" = config.scheme.withHashtag.base08;
+      };
+      previews = {
+        "max-height" = 480;
+        "max-scale" = 0.5;
+      };
+      binds = {
+        "Alt+Tab"."next-window" = {};
+        "Alt+Shift+Tab"."previous-window" = {};
+        "Alt+grave"."next-window"._props.filter = "app-id";
+        "Alt+Shift+grave"."previous-window"._props.filter = "app-id";
+        "Mod+Tab"."next-window" = {};
+        "Mod+Shift+Tab"."previous-window" = {};
+        "Mod+grave"."next-window"._props.filter = "app-id";
+        "Mod+Shift+grave"."previous-window"._props.filter = "app-id";
+      };
+    };
   };
 }

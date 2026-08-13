@@ -20,8 +20,6 @@
         services = {
           displayManager.sessionPackages = [ niri ]; # Add Niri to display manager session.
         };
-
-        systemd.packages = [ niri ];
       };
     };
 }

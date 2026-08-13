@@ -1,9 +1,9 @@
 {
-  flake.modules.homeManager.pc = { config, ... }: {
+  flake.modules.homeManager.pc = { config, osConfig, ... }: {
     programs.kitty = {
       shellIntegration.mode = "no-cursor";
       settings = {
-        font_family = config.terminal.font-family;
+        font_family = builtins.head osConfig.fonts.fontconfig.defaultFonts.monospace;
         font_size = config.terminal.font-size;
 
         window_padding_width = 8;

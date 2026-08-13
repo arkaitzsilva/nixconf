@@ -1,5 +1,5 @@
 {
   flake.modules.homeManager.pc = {
-    services.wpaperd.enable = true;
+    programs.brave.enable = true;
   };
 }

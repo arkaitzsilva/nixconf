@@ -15,12 +15,7 @@
     };
 
     niri = {
-      url = "github:niri-wm/niri/v26.04";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
+      url = "github:niri-wm/niri";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
