@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.pc = { config, lib, osConfig, ... }: lib.mkIf config.qt.enable {
+  flake.modules.homeManager.pc = { config, lib, ... }: lib.mkIf config.qt.enable {
     qt.qt6ctSettings = {
       Appearance = {
         style = config.qt.style.name;
@@ -8,8 +8,8 @@
       };
 
       Fonts = {
-        general = "\"${builtins.head osConfig.fonts.fontconfig.defaultFonts.sansSerif},10\"";
-        fixed = "\"${builtins.head osConfig.fonts.fontconfig.defaultFonts.monospace},10\"";
+        general = "\"${config.style.fonts.sansSerif.name},${toString config.style.fonts.sizes.applications}\"";
+        fixed = "\"${config.style.fonts.monospace.name},${toString config.style.fonts.sizes.terminal}\"";
       };
     };
   };

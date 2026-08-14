@@ -1,5 +1,6 @@
 system: "base16"
 name: "Retrowave"
+description: "A fork of the popular Synthwave84 color scheme, which is inspired by the aesthetics of the 1980s and the retro-futuristic genre known as synthwave."
 author: "maxmx03"
 variant: "dark"
 palette:

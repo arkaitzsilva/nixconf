@@ -1,10 +1,10 @@
 {
-  flake.modules.homeManager.pc = { config, osConfig, ... }: {
+  flake.modules.homeManager.pc = { config, ... }: {
     programs.foot = {
       settings = {
         main = {
           gamma-correct-blending = "no";
-          font = "${builtins.head osConfig.fonts.fontconfig.defaultFonts.monospace}:size=${toString config.terminal.font-size}";
+          font = "${config.style.fonts.monospace.name}:size=${toString config.style.fonts.sizes.terminal}";
           letter-spacing = 0;
           dpi-aware = "no";
           pad = "10x10";
