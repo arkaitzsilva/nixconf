@@ -2,13 +2,13 @@
   perSystem = { pkgs, ... }: {
     packages.emule-qt = pkgs.stdenv.mkDerivation {
       pname = "emule-qt";
-      version = "0.2.0";
+      version = "0.3.0";
 
       src = pkgs.fetchFromGitHub {
         owner = "ModderMule";
         repo = "emule-qt";
-        rev = "v0.2.0";
-        hash = "sha256-os3aHNIYDBdJJ/93I0GER72RxKHtAUXVmexycs87uoo=";
+        rev = "v0.3.0";
+        hash = "sha256-NZKvTSqn18GvBy3t4+9tDIMBkkE/zJvW5F7CVVerVis=";
       };
 
       nativeBuildInputs = with pkgs; [

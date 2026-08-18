@@ -9,6 +9,10 @@
         type = lib.types.int;
         default = null;
       };
+      package = lib.mkOption {
+        type = lib.types.str;
+        default = null;
+      };
     };
   };
 }
