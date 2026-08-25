@@ -11,7 +11,7 @@
         "custom-shader" = builtins.readFile ./shaders/morph_open.glsl;
       };
       "window-close" = {
-        "duration-ms" = 800;
+        "duration-ms" = 600;
         curve._args = ["ease-out-cubic"];
         "custom-shader" = builtins.readFile ./shaders/glitch_close.glsl;
       };

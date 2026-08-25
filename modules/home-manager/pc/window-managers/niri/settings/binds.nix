@@ -10,14 +10,6 @@
         _props."hotkey-overlay-title" = "Open a file manager: ${config.file-manager.name}";
         "spawn-sh"._args = ["${config.file-manager.start-cmd}"];
       };
-      "Mod+R" = {
-        _props."hotkey-overlay-title" = "Toggle launcher";
-        "spawn-sh"._args = ["noctalia msg panel-toggle launcher"];
-      };
-      "Mod+Shift+Q" = {
-        _props."hotkey-overlay-title" = "Toggle session";
-        "spawn-sh"._args = ["noctalia msg panel-toggle session"];
-      };
       "Super+Alt+S" = {
         _props = {
           "allow-when-locked" = true;
