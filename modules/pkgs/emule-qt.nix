@@ -2,13 +2,13 @@
   perSystem = { pkgs, ... }: {
     packages.emule-qt = pkgs.stdenv.mkDerivation {
       pname = "emule-qt";
-      version = "0.3.0";
+      version = "0.5.2";
 
       src = pkgs.fetchFromGitHub {
         owner = "ModderMule";
         repo = "emule-qt";
-        rev = "v0.3.0";
-        hash = "sha256-NZKvTSqn18GvBy3t4+9tDIMBkkE/zJvW5F7CVVerVis=";
+        rev = "v0.5.2";
+        hash = "sha256-26Qqy87PyXbsuly1cv32f8wnFCJVKBabT16wJDhhgCE=";
       };
 
       nativeBuildInputs = with pkgs; [
@@ -30,6 +30,8 @@
 
       cmakeFlags = [
         (pkgs.lib.cmakeBool "EMULE_BUILD_TESTS" false)
+        (pkgs.lib.cmakeBool "EMULE_USENET_RAPIDYENC" false)
+        (pkgs.lib.cmakeBool "EMULE_USENET_PAR2" false)
       ];
 
       installPhase = ''

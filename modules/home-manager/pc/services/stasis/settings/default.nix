@@ -18,7 +18,7 @@
         inhibit_apps [
           "mpv"
           r"firefox.*"
-          "qbittorrent"
+          r".*qbittorrent.*"
         ]
 
         # ----------------------------------------------------------------

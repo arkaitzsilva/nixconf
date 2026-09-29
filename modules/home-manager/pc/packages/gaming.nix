@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.pc = { pkgs, ... }: {
     home.packages = with pkgs; [
-      rmg-wayland
+      gopher64
       dolphin-emu
     ];
   };

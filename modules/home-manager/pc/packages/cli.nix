@@ -8,6 +8,7 @@
       asciiquarium
       gifsicle
       tree
+      yt-dlp
     ];
   };
 }
